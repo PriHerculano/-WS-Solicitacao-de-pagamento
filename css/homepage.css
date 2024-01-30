@@ -63,6 +63,10 @@ body{
     font-weight: 500;
 }
 
+.nav{
+    flex:1;
+}
+
 .menu ul li{
     list-style: none;
     margin-bottom: 5px;
