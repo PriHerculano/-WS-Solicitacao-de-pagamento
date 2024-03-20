@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Priscila Herculano">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/img/logo-fundoescuro.png" type="image/x-icon">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/1.0cadastroParceiros.css">
+    <title>WebSupply</title>
+</head>
+
+<body>
+
+    <div class="container-side-bar">
+        <div class="sidebar">
+            <div class="head">
+                <div class="user-img">
+                    <img src="/img/logo-fundoescuro.png" alt="">
+                </div>
+                <div class="user-details">
+                    <p class="title">Estágiario(a)</p>
+                    <p class="name">Priscila Herculano</p>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="menu">
+                    <!-- <p class="title">Main</p> -->
+                    <ul>
+                        <li class="active">
+                            <a href="/html/home.html">
+                                <i class="icon ph-bold ph-house-simple"></i>
+                                <span class="text">Início</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-thumbs-up"></i>
+                                <span class="text">Parceiros</span>
+                                <i class="arrow ph-bold ph-caret-down"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Cadastro</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Visualizar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-chart-bar"></i>
+                                <span class="text">Produto</span>
+                                <i class="arrow ph-bold ph-caret-down"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Cadastro</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Catálogo</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-file-text"></i>
+                                <span class="text">Solicitação de Pagamento</span>
+                                <i class="arrow ph-bold ph-caret-down"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Solicitar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Consultar</span>
+                                    </a>
+                                </li><li>
+                                    <a href="#">
+                                        <span class="text">Aprovar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <p class="title">Configurações</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-user"></i>
+                                <span class="text">Usuários</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu">
+                <p class="title">Conta</p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icon ph-bold ph-sign-out"></i>
+                            <span class="text">Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section>
+
+        <div class="container login-container">
+            <h3 class="mb-2" style="font-family: Montserrat";>CADASTRO DE ITENS</h3>
+            <h5 class="mb-5">Informe os dados abaixo, fique atento aos campos obrigatórios(<span style="color: rgb(202, 0, 0);">*</span>)</h5>
+
+            <div>
+                <label class="w-100" for="senha">Nome:<span style="color: rgb(202, 0, 0);">*</span></label>
+                <div class="input-group">
+                    <input class="form-control" type="password" id="senha" name="senha" required>
+                </div>
+            </div>
+
+            <label class="w-100" for="usuario">Tipo:<span style="color: rgb(202, 0, 0);">*</span></label>
+            
+            <select class="form-select form-select-lg mb-2" style="border-radius: 30px; color: #353535;"
+                aria-label="Large select example">
+                <option selected>Selecione</option>
+                <option value="1">Material</option>
+                <option value="2">Serviço</option>
+            </select>
+
+
+    
+                <input type="submit" value="Cadastrar">
+            </form>
+
+        </div>
+    </section>
+
+      <!-- <div class="section"> <p>aaaa</p></div> -->
+
+
+    <!-- link bootstrap: -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <!-- link de icones/simbolos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+        integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+        crossorigin="anonymous"></script>
+    <script src="/js/homepage.js"></script>
+</body>
+
+</html>
