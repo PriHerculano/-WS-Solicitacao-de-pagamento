@@ -154,25 +154,58 @@
                 <input class="w-100" type="password" id="confirma" name="confirma" required>
             </div>
 
+            <div class="input-group mb-3">
+                <label class="w-100" for="senha">CEP:<span style="color: rgb(202, 0, 0);">*</span></label>
+                <input type="text" class="form-control" placeholder="xxxxx-xxx" aria-label="xxxxx-xxx" aria-describedby="button-addon2" style="border-radius: 20px 0px 0px 20px;">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2" style="border-radius: 0px 20px 20px 0px; background-color: #21497C; opacity: 0.78; color: #E9E9E9;">Buscar</button>
+              </div>
+
             <form action="processar_login.php" method="post">
                 <div class="row">
                     <div class="col-6">
                         <div>
-                            <label class="w-100" for="usuario">Nome completo:</label>
-                            <input class="w-100" type="text" id="nome" name="nome" required>
+                            <label class="w-100" for="usuario">Endereço:</label>
+                            <input class="w-100" type="text" id="endereco" name="endereco" required>
                         </div>
                     </div>
                     <div class="col-6">
                         <div>
-                            <label class="w-100" for="usuario">Telefone:</label>
-                            <input class="w-100" type="text" id="telefone" name="telefome" required>
+                            <label class="w-100" for="usuario">Nº:</label>
+                            <input class="w-100" type="text" id="numero" name="numero" required>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <label class="w-100" for="usuario">Bairro:</label>
+                            <input class="w-100" type="text" id="bairro" name="bairro" required>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <label class="w-100" for="usuario">Complemento:</label>
+                            <input class="w-100" type="text" id="complemento" name="complemento" required>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <label class="w-100" for="usuario">Cidade:</label>
+                            <input class="w-100" type="text" id="cidade" name="cidade" required>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <label class="w-100" for="usuario">UF:</label>
+                            <input class="w-100" type="text" id="uf" name="uf" required>
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div>
                     <label class="w-100" for="usuario">Nome de Usuário ou Email:</label>
                     <input class="w-100" type="text" id="usuario" name="usuario" required>
                 </div>
+=======
+>>>>>>> a62bad1078cef45e7508059ea2baa6a13e90c318
     
                 <input type="submit" value="Cadastrar">
             </form>
