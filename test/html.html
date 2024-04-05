@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta name="author" content="Priscila Herculano"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" -->
+        <!-- integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <!-- <link rel="shortcut icon" href="/img/logo-fundoescuro.png" type="image/x-icon"> -->
+    <!-- <script src="https://unpkg.com/@phosphor-icons/web"></script> -->
+    <!-- <link rel="stylesheet" href="/test/css.css"> -->
+    <!-- <link rel="stylesheet" href="//cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css"> -->
+    <!-- <link rel="stylesheet" href="/css/sidebar.css"> -->
+    <!-- <link rel="stylesheet" href="/css/homepage.css"> -->
+    <!-- <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
+    <!-- <script src="//cdn.datatables.net/2.0.3/js/dataTables.min.js"></script> -->
+    <link rel="stylesheet" href="/test/teste.css">
+
+    <title>WebSupply</title>
+</head>
+
+<body>
+    <div class="sidebar">
+
+    </div>
+
+    <div class="xinforimpola">
+
+    </div>
+
+    <!-- <div class="container-side-bar">
+        <div class="sidebar">
+            <div class="head">
+                <div class="user-img">
+                    <img src="/img/logo-fundoescuro.png" alt="">
+                </div>
+                <div class="user-details">
+                    <p class="title">Estágiario(a)</p>
+                    <p class="name">Priscila Herculano</p>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="menu">
+                    <p class="title">Main</p> 
+                    <ul>
+                        <li class="active">
+                            <a href="/0.0telainicio.html">
+                                <i class="icon ph-bold ph-house-simple"></i>
+                                <span class="text">Início</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-thumbs-up"></i>
+                                <span class="text">Parceiros</span>
+                                <i class="arrow ph-bold ph-caret-down"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/html/parceiros/1.0cadastroParceiros.html">
+                                        <span class="text">Cadastro</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/html/parceiros/1.2visualizarParceiros.html">
+                                        <span class="text">Visualizar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-chart-bar"></i>
+                                <span class="text">Item</span>
+                                <i class="arrow ph-bold ph-caret-down"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/html/itens/2.0cadastroItens.html">
+                                        <span class="text">Cadastro</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/html/itens/2.1visualizarItens.html">
+                                        <span class="text">Visualizar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-file-text"></i>
+                                <span class="text">Solicitação de Pagamento</span>
+                                <i class="arrow ph-bold ph-caret-down"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Solicitar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Visualizar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <p class="title">Configurações</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-user"></i>
+                                <span class="text">Usuários</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu">
+                <p class="title">Conta</p>
+                <ul>
+                    <li>
+                        <a href="/0.0telainicio.html">
+                            <i class="icon ph-bold ph-sign-out"></i>
+                            <span class="text">Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="box">
+            <table id="listParceiro">
+                <thead>
+                    <tr>
+                        <th>CPF/CNPJ</th>
+                        <th>Parceiro</th>
+                        <th>Razão Social/Nome</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>123.456.789-00</td>
+                        <td>Fornecedor XYZ Ltda</td>
+                        <td>Empresa Alfa</td>
+                        <td> <a href="/html/parceiros/1.3consultaParceiros.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-pencil-square" viewBox="0 0 16 16" style="color: #5b6677;">
+                                    <path
+                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                    <path fill-rule="evenodd"
+                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                                </svg>
+                            </a></td>
+                    </tr>
+                    <tr>
+                        <td>987.654.321-00</td>
+                        <td>Distribuidora ABC S/A</td>
+                        <td>Companhia Beta Ltda</td>
+                        <td> <a href="/html/parceiros/1.3consultaParceiros.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16" style="color: #5b6677;">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                            </svg>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>111.222.333-44</td>
+                        <td>Comércio de Produtos EFG</td>
+                        <td>Indústria Gama S/A</td>
+                        <td> <a href="/html/parceiros/1.3consultaParceiros.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16" style="color: #5b6677;">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                            </svg>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>555.666.777-88</td>
+                        <td>Importadora LMN Ltda</td>
+                        <td>Serviços Delta</td>
+                        <td> <a href="/html/parceiros/1.3consultaParceiros.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16" style="color: #5b6677;">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                            </svg>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>999.888.777-66</td>
+                        <td>Exportadora QRS S/A</td>
+                        <td>Corporação Ômega Ltda</td>
+                        <td> <a href="/html/parceiros/1.3consultaParceiros.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16" style="color: #5b6677;">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                            </svg>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>111.222.333-55</td>
+                        <td>Indústria de Materiais HJI Ltda</td>
+                        <td>Empresa Ômega</td>
+                        <td> <a href="/html/parceiros/1.3consultaParceiros.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16" style="color: #5b6677;">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                            </svg>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>654.987.321-56</td>
+                        <td>Fabricante de Componentes RST Ltda</td>
+                        <td>Companhia Beta</td>
+                        <td> <a href="/html/parceiros/1.3consultaParceiros.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16" style="color: #5b6677;">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                            </svg>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>951.753.852-10</td>
+                        <td>Importadora de Ferramentas OPQ S/A</td>
+                        <td>Corporação Alfa</td>
+                        <td>
+                            <link rel="stylesheet" href="/html/parceiros/1.3consultaParceiros.html">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <script>
+        var table = new DataTable('#listParceiro', {
+            language: { url: "https://cdn.datatables.net/plug-ins/1.11.5/i18n/Portuguese-Brasil.json" },
+            lengthMenu: [6], // Define o valor padrão de 6 sem a opção de seleção
+            paging: true,
+            searching: true,
+            ordering: false,
+            language: {
+                lengthMenu: 'Apresentar _MENU_ linhas por página',
+                zeroRecords: 'Não há Registros',
+                info: 'Página _PAGE_ de _PAGES_',
+                infoEmpty: false,
+                infoFiltered: '(Filtrando de _MAX_ registros)',
+                searchPlaceholder: "Busque o parceiro",
+                search: '',
+                paginate: {
+                    next: '<i class="fas fa-angle-right"></i>',
+                    previous: '<i class="fas fa-angle-left"></i>',
+                },
+            },
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+        integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+        crossorigin="anonymous"></script>
+    <script src="/js/homepage.js"></script> -->
+</body>
+
+</html>

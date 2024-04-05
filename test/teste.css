@@ -1,75 +1,84 @@
-@import url(/css/others/style.css);
+* {
+    margin: 0;
+    padding: 0;
 
-/* .box {
-    position: absolute !important;
+}
+
+body {
+    display: flex;
+}
+
+.siderbar {
     background-color: red;
-    margin: auto !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 60%; 
+    height: 100vh;
+    width: 15%;
+}
 
-} */
+.content {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+}
 
-
-table {
-    border-radius: 20px;
-    overflow: hidden;
+.box {
+    background-color: rgb(37, 40, 36);
+    display: flex;
+    padding: 20px;
+    border-radius: 30px;
+    width: 50%;
+    margin: auto;
 }
 
 table.dataTable {
-    width: 70%;
-    height: 7px;
+    width: 100%;
     margin: 20px auto;
     border-collapse: collapse;
 }
-
+ 
 table.dataTable thead th,
 table.dataTable thead td {
     text-align: center;
     font-size: 22px;
-    color: #fff;
-    background-color: #21497C;
-    opacity: 0.78;
 }
-
+ 
 table.dataTable th,
 table.dataTable td {
-    width: 5%;
-    border: 1px solid #000000;
+    width: 20%;
+    border: 1px solid #fff;
     padding: 30px 5px;
-    color: #484848;
+    color: #fff;
     text-align: center;
 }
-
+ 
 table.dataTable tbody tr {
-    color: rgb(58, 177, 177);
-    background-color:#dedede;
+    background-color: var(--backgroundActiveItem);
+    background-color:#3f279d;
 }
-
-/*  
+ 
 table.dataTable tbody tr:nth-child(even) {
     background-color: transparent;
-} */
-
+}
+ 
 td a {
     text-decoration: none;
     color: #fff;
-    border: 1px solid #010a1302;
+    border: 1px solid var(--borderColor);
     padding: 10px 40px;
     border-radius: 5px;
     transition: .1s ease;
 }
-
-/* td a:hover {
+ 
+td a:hover {
     border: 2px solid;
     transition: .2s ease;
-} */
-
+}
+ 
 div.dt-container {
     width: 100%;
 }
-
+ 
 div.dt-container div.dt-layout-row {
     display: flex;
     align-items: center;
@@ -77,52 +86,52 @@ div.dt-container div.dt-layout-row {
     clear: both;
     width: 100%;
 }
-
+ 
 div.dt-container div.dt-layout-row.dt-layout-table {
     width: 100%;
 }
-
+ 
 div.dt-container div.dt-layout-row.dt-layout-table div.dt-layout-cell {
     display: block;
     width: 100%;
 }
-
+ 
 main {
     display: flex;
 }
-
+ 
 .container {
-    background-color:#111;
+    background-color: var(--azulFundoPrincipal);
     width: 80%;
 }
-
+ 
 .itemsCentered {
     width: 70%;
     margin: auto;
 }
-
-.title-table {
+ 
+.title {
     color: #fff;
     font-size: 32px;
     font-weight: 500;
     text-align: center;
     margin-top: 100px;
 }
-
+ 
 div.dt-container .dt-length {
     display: none;
 }
  
 div.dt-container .dt-search input {
-    border: 1px solid #6d2a2f;
+    border: 1px solid var(--borderColor);
     border-radius: 5px;
     padding: 10px;
     background-color: transparent;
     color: #fff;
     margin-left: 3px;
     margin-top: 30px;
-} */
-
+}
+ 
 /* botões de passar a pagina */
 div.dt-container .dt-paging .dt-paging-button {
     box-sizing: border-box;
@@ -138,36 +147,36 @@ div.dt-container .dt-paging .dt-paging-button {
     border-radius: 2px;
     background: transparent;
 }
-
+ 
 div.dt-container .dt-paging .dt-paging-button.current,
 div.dt-container .dt-paging .dt-paging-button.current:hover {
     color: #fff !important;
     border: 1px solid var(--btnColor);
 }
-
+ 
 div.dt-container .dt-paging .dt-paging-button.disabled,
 div.dt-container .dt-paging .dt-paging-button.disabled:hover,
 div.dt-container .dt-paging .dt-paging-button.disabled:active {
     cursor: default;
     color: rgba(0, 0, 0, 0.5) !important;
     border: 1px solid transparent;
-    /* background: transparent; */
+    background: transparent;
     box-shadow: none;
 }
-
+ 
 div.dt-container .dt-paging .dt-paging-button:hover {
     color: white !important;
     border: 1px solid #111;
-    /* background-color: var(--btnColor); */
-    background:#21497C;
+    background-color: var(--btnColor);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--btnColor)), color-stop(100%, #6d2a2f));
 }
-
+ 
 div.dt-container .dt-paging .dt-paging-button:active {
-    /* outline: none; */
-    /* background-color: var(--borderColor); */
+    outline: none;
+    background-color: var(--borderColor);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5A85B0), color-stop(100%, #2b4258));
 }
-
+ 
 div.dt-container .dt-length,
 div.dt-container .dt-search,
 div.dt-container .dt-info,
@@ -178,13 +187,13 @@ div.dt-container .dt-paging {
  
 @media screen and (max-width: 767px) {
     div.dt-container div.dt-layout-row {
-        display: block;
+      display: block;
     }
-    
+ 
     div.dt-container div.dt-layout-cell {
-        display: block;
+      display: block;
     }
-    
+ 
     div.dt-container div.dt-layout-cell.dt-full,
     div.dt-container div.dt-layout-cell.dt-start,
     div.dt-container div.dt-layout-cell.dt-end {
@@ -204,44 +213,3 @@ div.dt-container .dt-paging {
       margin-top: 0.5em;
     }
   }
-
- /* Estilos para o campo de pesquisa */
-#dt-search-0 {
-    background-color: #fff;
-    color: #000000;
-    border-color: #21497C;
-    position: absolute; 
-    top: 50px; 
-    left: 92pc; 
-    transform: translateX(-50%); 
-    width: 90%; 
-    max-width: 300px; 
-}
-
-div.dt-container .dt-paging {
-    text-align: center; /* Centraliza horizontalmente os botões */
-    margin-top: 20px; /* Adiciona um espaço entre a tabela e os botões */
-    clear: both; /* Limpa qualquer elemento flutuante anterior */
-}
-
-div.dt-container .dt-paging .dt-paging-button {
-    box-sizing: border-box;
-    display: inline-block;
-    min-width: 1.5em;
-    padding: 0.5em 1em;
-    margin: 0 2px; /* Adiciona um espaço entre os botões */
-    text-align: center;
-    text-decoration: none !important;
-    cursor: pointer;
-    color: #fff !important;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    background: transparent;
-}
-
-/* Limpeza de floats */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}

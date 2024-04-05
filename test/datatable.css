@@ -1,0 +1,221 @@
+@charset "UTF-8";
+ 
+/* Estilo da tabela */
+table {
+    margin: auto;
+    border-spacing: 0;
+    border: 2px solid #fff;
+    width: 100%; /* Definindo a largura da tabela como 100% */
+}
+ 
+ 
+#listar_fornecedor_wrapper {
+  width: 100%;
+}
+ 
+/* Estilo das células do cabeçalho e do corpo da tabela */
+table.dataTable thead th,
+table.dataTable tbody td {
+  text-align: center;
+  color: #fff;
+  padding: 16px;
+}
+ 
+ 
+/* Estilo dos links na tabela */
+table a {
+  cursor: pointer;
+  padding: .2em 1.8em;
+}
+ 
+table a:hover {
+  background-color: #5b6677;
+}
+ 
+/* Estilo dos elementos da tabela com borda */
+table.dataTable.row-border > tbody > tr > *,
+table.dataTable.display > tbody > tr > * {
+  border-top: 2px solid #fff;
+}
+ 
+table.dataTable.row-border > tbody > tr:first-child > *,
+table.dataTable.display > tbody > tr:first-child > * {
+  border-top: none;
+}
+ 
+/* Estilo dos cabeçalhos da tabela */
+table.dataTable thead th {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 20px;
+}
+ 
+/* Estilo dos elementos de label */
+table label {
+  color: #fff;
+  font-weight: 700;
+}
+ 
+/* Estilo do texto de informação */
+.dt-info {
+  margin-left: 2em;
+  color: #fff;
+}
+ 
+/* Layout do controle de recursos */
+div.dt-container {
+  width: 98%;
+  clear: both;
+  margin: auto;
+}
+ 
+/* Layout de linha e célula */
+div.dt-container div.dt-layout-row {
+  display: table;
+  clear: both;
+  width: 100%;
+  color: #fff;
+}
+ 
+div.dt-container div.dt-layout-cell {
+  display: table-cell;
+  padding: 5px 0;
+}
+ 
+div.dt-container div.dt-layout-cell.dt-end {
+  text-align: right;
+}
+ 
+div.dt-container div.dt-layout-cell:empty {
+  display: none;
+}
+ 
+/* Estilo de pesquisa */
+.dt-search {
+  margin-top: .3em;
+  padding-right: 2em;
+}
+ 
+div.dt-container .dt-input {
+  border: 3px solid #C87A7B;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: transparent;
+  color: inherit;
+  width: 15em;
+}
+ 
+div.dt-container select.dt-input {
+  padding: 4px;
+}
+ 
+/* Estilo da paginação */
+div.dt-container .dt-paging .dt-paging-button {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff !important;
+}
+ 
+.dt-paging.paging_full_numbers {
+  margin-right: 2em;
+}
+ 
+div.dt-container .dt-paging .dt-paging-button.current,
+div.dt-container .dt-paging .dt-paging-button.current:hover {
+  color: #fff !important;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #C87A7B;
+}
+ 
+div.dt-container .dt-paging .dt-paging-button.disabled,
+div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+div.dt-container .dt-paging .dt-paging-button.disabled:active {
+  cursor: default;
+  color: #fff !important;
+  border: 1px solid transparent;
+  background: transparent;
+  box-shadow: none;
+}
+ 
+div.dt-container .dt-paging .dt-paging-button:hover {
+  color: #fff;
+  background-color: blue;
+}
+ 
+div.dt-container .dt-paging .dt-paging-button:active {
+  border: 1px solid #fff;
+  background-color: blue;
+  box-shadow: inset 0 0 3px #111;
+}
+ 
+div.dt-container .dataTables_scroll {
+  clear: both;
+}
+ 
+div.dt-container .dataTables_scroll div.dt-scroll-body {
+  -webkit-overflow-scrolling: touch;
+}
+ 
+/* botão expandir */
+.botao_expandir {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+ 
+/* Responsividade */
+@media screen and (max-width: 767px) {
+  div.dt-container div.dt-layout-row {
+    display: block;
+  }
+ 
+  div.dt-container div.dt-layout-cell {
+    display: block;
+  }
+ 
+  div.dt-container div.dt-layout-cell.dt-full,
+  div.dt-container div.dt-layout-cell.dt-start,
+  div.dt-container div.dt-layout-cell.dt-end {
+    text-align: center;
+  }
+}
+ 
+@media screen and (max-width: 640px) {
+  .dt-container .dt-length,
+  .dt-container .dt-search {
+    float: none;
+    text-align: center;
+  }
+ 
+  .dt-container .dt-search {
+    margin-top: 0.5em;
+  }
+}
+ 
+.col-id {
+    width: 10%;
+}
+ 
+.col-nome {
+    width: 60%;
+}
+ 
+.col-quantidade {
+    width: 30%;
+}
+ 
+/* Estilo de pesquisa */
+.dt-search {
+    margin-top: .3em;
+    padding-right: 2em;
+  }
+ 
+  /* Estilo da palavra "Filtrar:" */
+  .dt-search label {
+    margin-right: 10px; /* Adicionando margem à direita */
+  }
+ 
