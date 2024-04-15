@@ -1,4 +1,164 @@
 @charset "UTF-8";
+@import url(/css/others/style.css);
+
+table {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+table.dataTable {
+    width: 70%;
+    height: 7px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    background-color: #21497C;
+    opacity: 0.78;
+}
+
+table.dataTable th,
+table.dataTable td {
+    width: 5%;
+    border: 1px solid #000000;
+    padding: 30px 5px;
+    color: #484848;
+    text-align: center;
+}
+
+table.dataTable tbody tr {
+    background-color:#ffffff;
+}
+
+
+td a {
+    text-decoration: none;
+    border: 1px solid #010a1302;
+    padding: 10px 40px;
+    border-radius: 5px;
+    transition: .1s ease;
+}
+
+
+div.dt-container {
+    width: 100%;
+}
+
+div.dt-container div.dt-layout-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    clear: both;
+    width: 100%;
+}
+
+div.dt-container div.dt-layout-row.dt-layout-table {
+    width: 100%;
+}
+
+div.dt-container div.dt-layout-row.dt-layout-table div.dt-layout-cell {
+    display: block;
+    width: 100%;
+}
+
+main {
+    display: flex;
+}
+
+.itemsCentered {
+    width: 70%;
+    margin: auto;
+}
+
+.title-table {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 100px;
+}
+
+div.dt-container .dt-length {
+    display: none;
+}
+
+div.dt-container .dt-search input {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: 3px;
+    margin-top: 30px;
+} 
+
+/* botões de passar a pagina */
+div.dt-container .dt-paging .dt-paging-button {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1.5em;
+    padding: 0.5em 1em;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background: transparent;
+}
+
+
+div.dt-container .dt-length,
+div.dt-container .dt-search,
+div.dt-container .dt-info,
+div.dt-container .dt-processing,
+div.dt-container .dt-paging {
+    color: #000000;
+}
+
+@media screen and (max-width: 767px) {
+    div.dt-container div.dt-layout-row {
+        display: block;
+    }
+    
+    div.dt-container div.dt-layout-cell {
+        display: block;
+    }
+    
+    div.dt-container div.dt-layout-cell.dt-full,
+    div.dt-container div.dt-layout-cell.dt-start,
+    div.dt-container div.dt-layout-cell.dt-end {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    .dt-container .dt-length,
+    .dt-container .dt-search {
+        float: none;
+        text-align: center;
+    }
+    
+    /* .dt-container .dt-search {
+        margin-top: 0.5em;
+    } */
+}
+
+/* Estilos para o campo de pesquisa */
+#dt-search-0 {
+    background-color: #fff;
+    color: #000000;
+    border-color: #21497C;
+    top: 50px; 
+    left: 92pc; 
+    width: 50rem; 
+    transform: translateX(-286%); 
+    max-width: 300px; 
+}
  
 /* Estilo da tabela */
 table {
@@ -17,8 +177,7 @@ table {
 table.dataTable thead th,
 table.dataTable tbody td {
   text-align: center;
-  color: #fff;
-  padding: 16px;
+  padding: 17px;
 }
  
  
@@ -26,10 +185,6 @@ table.dataTable tbody td {
 table a {
   cursor: pointer;
   padding: .2em 1.8em;
-}
- 
-table a:hover {
-  background-color: #5b6677;
 }
  
 /* Estilo dos elementos da tabela com borda */
@@ -43,32 +198,6 @@ table.dataTable.display > tbody > tr:first-child > * {
   border-top: none;
 }
  
-/* Estilo dos cabeçalhos da tabela */
-table.dataTable thead th {
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  color: #fff;
-  font-size: 20px;
-}
- 
-/* Estilo dos elementos de label */
-table label {
-  color: #fff;
-  font-weight: 700;
-}
- 
-/* Estilo do texto de informação */
-.dt-info {
-  margin-left: 2em;
-  color: #fff;
-}
- 
-/* Layout do controle de recursos */
-div.dt-container {
-  width: 98%;
-  clear: both;
-  margin: auto;
-}
  
 /* Layout de linha e célula */
 div.dt-container div.dt-layout-row {
@@ -96,15 +225,7 @@ div.dt-container div.dt-layout-cell:empty {
   margin-top: .3em;
   padding-right: 2em;
 }
- 
-div.dt-container .dt-input {
-  border: 3px solid #C87A7B;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: transparent;
-  color: inherit;
-  width: 15em;
-}
+
  
 div.dt-container select.dt-input {
   padding: 4px;
@@ -117,7 +238,7 @@ div.dt-container .dt-paging .dt-paging-button {
   border: 1px solid transparent;
   border-radius: 8px;
   background: transparent;
-  color: #fff !important;
+  color: #000000 !important;
 }
  
 .dt-paging.paging_full_numbers {
@@ -126,7 +247,7 @@ div.dt-container .dt-paging .dt-paging-button {
  
 div.dt-container .dt-paging .dt-paging-button.current,
 div.dt-container .dt-paging .dt-paging-button.current:hover {
-  color: #fff !important;
+  color: #ffffff !important;
   border: 1px solid rgba(0, 0, 0, 0.3);
   background-color: #C87A7B;
 }
@@ -142,14 +263,18 @@ div.dt-container .dt-paging .dt-paging-button.disabled:active {
 }
  
 div.dt-container .dt-paging .dt-paging-button:hover {
-  color: #fff;
-  background-color: blue;
+  color: #fff !important;
+  background-color: rgb(200,122,123, 0.4);
 }
  
 div.dt-container .dt-paging .dt-paging-button:active {
   border: 1px solid #fff;
-  background-color: blue;
-  box-shadow: inset 0 0 3px #111;
+  background-color:rgb(200,122,123, 0.6);
+  box-shadow: inset 0 0 2px #ff7b7b;
+}
+
+.dt-paging-button disabled first, .dt-paging-button disabled previous{
+  color: aqua !important;
 }
  
 div.dt-container .dataTables_scroll {
@@ -219,3 +344,12 @@ div.dt-container .dataTables_scroll div.dt-scroll-body {
     margin-right: 10px; /* Adicionando margem à direita */
   }
  
+  div.dt-container .dt-paging .dt-paging-button.disabled,
+  div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+  div.dt-container .dt-paging .dt-paging-button.disabled:active {
+  cursor: default;
+  color: #919191 !important;
+  border: 1px solid transparent;
+  background: transparent;
+  box-shadow: none;
+}
