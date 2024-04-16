@@ -138,8 +138,9 @@
         </div>
     </div>
     <section>
-
+        
         <div class="container login-container">
+            <form action="processar_login.php" method="post">
             <h3 class="mb-2" style="font-family: Montserrat" ;>SOLICITAÇÃO DE PAGAMENTO</h3>
             <h5 class="mb-5">Confira seus dados para a sua solicitação de pagamento, não se esqueça de especificar o
                 produto, preço e quantidade. Lembre-se que todos os campos são obrigatórios.</h5>
@@ -182,11 +183,13 @@
                 </form>
             </div>
 
-            <div class="arquivos">
-                <p>Anexe o arquivo desejado no campo abaixo (PDF, XML, JPEG, DOC):</p>
-                <form action="/upload" method="post" enctype="multipart/form-data">
-                    <input type="file" name="files[]" multiple>
-                </form>
+            <div class="anexnotafiscal">
+                <div class="arquivos">
+                    <p>Anexe o arquivo desejado no campo abaixo (PDF, XML, JPEG, DOC):</p>
+                    <form action="/upload" method="post" enctype="multipart/form-data">
+                        <input type="file" name="files[]" multiple>
+                    </form>
+                </div>
             </div>
 
             <div class="addsolicitacao">
@@ -195,124 +198,60 @@
                     <button class="btn btn-primary" type="button">Material</button>
                     <button class="btn btn-primary" type="button">Serviço</button>
                 </div>
-                <div class="col-6">
-                    <div>
-                        <label class="w-100" for="usuario">Parceiro:</label>
-                        <select class="form-select form-select-lg mb-3" style="border-radius: 30px; color: #3b3b3bc2;"
-                            aria-label="Large select example">
-                            <option selected>Selecione</option>
-                            <option value="1">item cadastrado</option>
-                            <option value="2">item cadastrado</option>
-                            <option value="3">item cadastrado</option>
-                            <option value="4">item cadastrado</option>
-                            <option value="5">item cadastrado</option>
-                        </select>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                                <label class="w-100" for="usuario">Parceiro:</label>
+                                <select class="form-select form-select-lg mb-3" style="border-radius: 30px; color: #3b3b3bc2; display: flex;"
+                                    aria-label="Large select example">
+                                    <option selected>Selecione</option>
+                                    <option value="1">item cadastrado</option>
+                                    <option value="2">item cadastrado</option>
+                                    <option value="3">item cadastrado</option>
+                                    <option value="4">item cadastrado</option>
+                                    <option value="5">item cadastrado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <label for="quantia">Quantidade:</label>
+                            <input type="number" id="quantia" name="quantia" min="1" step="any" class="mb-3"
+                                style="border-radius: 30px; border: 2px solid #ccc; height: 40px; display: flex;" required> <br>
+                        </div>
+                        <p>COLOCAR BOTAO DE + AQUI</p>
                     </div>
                 </div>
             </div>
 
-
-
-
-
-
-
-            <div>
-                <label class="w-100" for="identificacao">CNPJ/CPF:<span style="color: rgb(202, 0, 0);">*</span></label>
-                <div class="input-group">
-                    <input class="form-control" type="text" id="identificacao" name="identificacao" required>
+            <div class="dadospgto">
+                <div>
+                    <label class="w-100" for="usuario">Tipo de pagamento:</label>
+                    <select class="form-select form-select-lg mb-3" style="border-radius: 30px; color: #3b3b3bc2; display: flex;"
+                        aria-label="Large select example">
+                        <option selected>Selecione</option>
+                        <option value="1">Solicitação de pagamento</option>
+                        <option value="2">/Reembolso</option>
+                    </select>
                 </div>
             </div>
 
-            <div>
-                <label class="w-100" for="parceiro">Parceiros:<span style="color: rgb(202, 0, 0);">*</span></label>
-                <input class="w-100" type="text" id="paceiro" name="parceiro" required>
-            </div>
-
-            <div class="input-group mb-3">
-                <label class="w-100" for="endereco">CEP:<span style="color: rgb(202, 0, 0);">*</span></label>
-                <input type="text" class="form-control" placeholder="xxxxx-xxx" aria-label="xxxxx-xxx"
-                    aria-describedby="button-addon2" style="border-radius: 20px 0px 0px 20px;">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                    style="border-radius: 0px 20px 20px 0px; background-color: #21497C; opacity: 0.78; color: #E9E9E9;">Buscar</button>
+            <div class="dadosolicitacao">
+                <p>Dados da solicitação</p>
+                
+                
             </div>
 
 
-            <form action="processar_login.php" method="post">
-                <div class="row">
-                    <div class="col-6">
-                        <div>
-                            <label class="w-100" for="usuario">Endereço:</label>
-                            <input class="w-100" type="text" id="endereco" name="endereco" required>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div>
-                            <label class="w-100" for="usuario">Nº:</label>
-                            <input class="w-100" type="text" id="numero" name="numero" required>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div>
-                            <label class="w-100" for="usuario">Bairro:</label>
-                            <input class="w-100" type="text" id="bairro" name="bairro" required>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div>
-                            <label class="w-100" for="usuario">Complemento:</label>
-                            <input class="w-100" type="text" id="complemento" name="complemento" required>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div>
-                            <label class="w-100" for="usuario">Cidade:</label>
-                            <input class="w-100" type="text" id="cidade" name="cidade" required>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div>
-                            <label class="w-100" for="usuario">UF:</label>
-                            <select class="form-select form-select-lg mb-3"
-                                style="border-radius: 30px; color: #3b3b3bc2;" aria-label="Large select example">
-                                <option selected>Selecione</option>
-                                <option value="1">RO</option>
-                                <option value="2">AC</option>
-                                <option value="3">AM</option>
-                                <option value="4">RR</option>
-                                <option value="5">PA</option>
-                                <option value="6">AP</option>
-                                <option value="7">TO</option>
-                                <option value="8">MA</option>
-                                <option value="9">PI</option>
-                                <option value="10">CE</option>
-                                <option value="11">RN</option>
-                                <option value="12">PB</option>
-                                <option value="13">PE</option>
-                                <option value="14">AL</option>
-                                <option value="15">SE</option>
-                                <option value="16">BA</option>
-                                <option value="17">MG</option>
-                                <option value="18">ES</option>
-                                <option value="19">RJ</option>
-                                <option value="20">SP</option>
-                                <option value="21">PR</option>
-                                <option value="22">SC</option>
-                                <option value="23">RS</option>
-                                <option value="24">MS</option>
-                                <option value="25">MT</option>
-                                <option value="26">GO</option>
-                                <option value="27">DF</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
 
-                <input type="submit" value="Cadastrar">
+
+                <input type="submit" value="Confirmar">
             </form>
 
         </div>
     </section>
+
+    
 
     <!-- <div class="section"> <p>aaaa</p></div> -->
 

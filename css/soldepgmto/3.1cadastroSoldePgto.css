@@ -8,7 +8,34 @@
     border-radius: 10px;
 }
 
+.datadepgto{
+    background-color: blue;
+    width: 550px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    
+}
+
 .data{
-    color: red;
     border-radius: 20px;
+}
+
+.anexnotafiscal{
+    background-color: yellow;
+    height: 100px;
+}
+
+.addsolicitacao{
+    background-color: green;
+    width: 550px;
+}
+
+.dadospgto{
+    background-color: aqua;
+    width: 500px;
+}
+
+.dadosolicitacao{
+    background-color: blanchedalmond;
 }

@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="/css/sidebar.css">
-    <link rel="stylesheet" href="/css/parceiros/1.0cadastroParceiros.css">
+    <link rel="stylesheet" href="/css/1.0cadastroParceiros.css">
     <title>WebSupply</title>
 </head>
 
@@ -34,7 +34,7 @@
                     <!-- <p class="title">Main</p> -->
                     <ul>
                         <li class="active">
-                            <a href="/0.0telainicio.html">
+                            <a href="/html/home.html">
                                 <i class="icon ph-bold ph-house-simple"></i>
                                 <span class="text">Início</span>
                             </a>
@@ -47,12 +47,12 @@
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="/html/parceiros/1.0cadastroParceiros.html">
+                                    <a href="#">
                                         <span class="text">Cadastro</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/html/parceiros/1.2visualizarParceiros.html">
+                                    <a href="#">
                                         <span class="text">Visualizar</span>
                                     </a>
                                 </li>
@@ -61,18 +61,18 @@
                         <li>
                             <a href="#">
                                 <i class="icon ph-bold ph-chart-bar"></i>
-                                <span class="text">Item</span>
+                                <span class="text">Produto</span>
                                 <i class="arrow ph-bold ph-caret-down"></i>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="/html/itens/2.0cadastroItens.html">
+                                    <a href="#">
                                         <span class="text">Cadastro</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/html/itens/2.1visualizarItens.html">
-                                        <span class="text">Visualizar</span>
+                                    <a href="#">
+                                        <span class="text">Catálogo</span>
                                     </a>
                                 </li>
                             </ul>
@@ -91,7 +91,11 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span class="text">Visualizar</span>
+                                        <span class="text">Consultar</span>
+                                    </a>
+                                </li><li>
+                                    <a href="#">
+                                        <span class="text">Aprovar</span>
                                     </a>
                                 </li>
                             </ul>
@@ -114,7 +118,7 @@
                 <p class="title">Conta</p>
                 <ul>
                     <li>
-                        <a href="/0.0telainicio.html">
+                        <a href="#">
                             <i class="icon ph-bold ph-sign-out"></i>
                             <span class="text">Sair</span>
                         </a>
@@ -129,15 +133,15 @@
             <h3 class="mb-2" style="font-family: Montserrat";>CADASTRO DE ITENS</h3>
             <h5 class="mb-5">Informe os dados abaixo, fique atento aos campos obrigatórios(<span style="color: rgb(202, 0, 0);">*</span>)</h5>
 
-            
             <div>
-                <label class="w-100" for="item">Nome:<span style="color: rgb(202, 0, 0);">*</span></label>
+                <label class="w-100" for="senha">Nome:<span style="color: rgb(202, 0, 0);">*</span></label>
                 <div class="input-group">
-                    <input class="form-control" type="text" id="item" name="item" required>
+                    <input class="form-control" type="password" id="senha" name="senha" required>
                 </div>
             </div>
+
+            <label class="w-100" for="usuario">Tipo:<span style="color: rgb(202, 0, 0);">*</span></label>
             
-            <label class="w-100" for="usuario">Tipo<span style="color: rgb(202, 0, 0);">*</span></label>
             <select class="form-select form-select-lg mb-2" style="border-radius: 30px; color: #353535;"
                 aria-label="Large select example">
                 <option selected>Selecione</option>
@@ -145,6 +149,12 @@
                 <option value="2">Serviço</option>
             </select>
 
+
+    
+                <input type="submit" value="Cadastrar">
+            </form>
+
+        </div>
     </section>
 
       <!-- <div class="section"> <p>aaaa</p></div> -->
