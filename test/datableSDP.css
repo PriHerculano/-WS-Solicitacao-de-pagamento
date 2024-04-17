@@ -1,0 +1,355 @@
+@charset "UTF-8";
+@import url(/css/others/style.css);
+
+table {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+table.dataTable {
+    width: 500px;
+    height: 7px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    background-color: rgb(1,73,124, 43%);
+    opacity: 0.78;
+}
+
+table.dataTable th,
+table.dataTable td {
+    width: 5%;
+    border: 1px solid #000000;
+    padding: 30px 5px;
+    color: #484848;
+    text-align: center;
+}
+
+table.dataTable tbody tr {
+    background-color:#ffffff;
+}
+
+
+td a {
+    text-decoration: none;
+    border: 1px solid #010a1302;
+    padding: 10px 40px;
+    border-radius: 5px;
+    transition: .1s ease;
+}
+
+
+div.dt-container {
+    width: 100%;
+}
+
+div.dt-container div.dt-layout-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    clear: both;
+    width: 100%;
+}
+
+div.dt-container div.dt-layout-row.dt-layout-table {
+    width: 100%;
+}
+
+div.dt-container div.dt-layout-row.dt-layout-table div.dt-layout-cell {
+    display: block;
+    width: 100%;
+}
+
+main {
+    display: flex;
+}
+
+.itemsCentered {
+    width: 70%;
+    margin: auto;
+}
+
+.title-table {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 100px;
+}
+
+div.dt-container .dt-length {
+    display: none;
+}
+
+div.dt-container .dt-search input {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: 3px;
+    margin-top: 30px;
+} 
+
+/* botões de passar a pagina */
+div.dt-container .dt-paging .dt-paging-button {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1.5em;
+    padding: 0.5em 1em;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background: transparent;
+}
+
+
+div.dt-container .dt-length,
+div.dt-container .dt-search,
+div.dt-container .dt-info,
+div.dt-container .dt-processing,
+div.dt-container .dt-paging {
+    color: #000000;
+}
+
+@media screen and (max-width: 767px) {
+    div.dt-container div.dt-layout-row {
+        display: block;
+    }
+    
+    div.dt-container div.dt-layout-cell {
+        display: block;
+    }
+    
+    div.dt-container div.dt-layout-cell.dt-full,
+    div.dt-container div.dt-layout-cell.dt-start,
+    div.dt-container div.dt-layout-cell.dt-end {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    .dt-container .dt-length,
+    .dt-container .dt-search {
+        float: none;
+        text-align: center;
+    }
+    
+    /* .dt-container .dt-search {
+        margin-top: 0.5em;
+    } */
+}
+
+/* Estilos para o campo de pesquisa */
+/* #dt-search-0 {
+    background-color: #fff;
+    color: #000000;
+    border-color: #21497C;
+    top: 50px; 
+    left: 92pc; 
+    width: 50rem; 
+    transform: translateX(-286%); 
+    max-width: 300px; 
+} */
+ 
+/* Estilo da tabela */
+table {
+    margin: auto;
+    border-spacing: 0;
+    border: 2px solid #fff;
+    width: 100%; /* Definindo a largura da tabela como 100% */
+}
+ 
+ 
+#listar_fornecedor_wrapper {
+  width: 100%;
+}
+ 
+/* Estilo das células do cabeçalho e do corpo da tabela */
+table.dataTable thead th,
+table.dataTable tbody td {
+  text-align: center;
+  padding: 17px;
+}
+ 
+ 
+/* Estilo dos links na tabela */
+table a {
+  cursor: pointer;
+  padding: .2em 1.8em;
+}
+ 
+/* Estilo dos elementos da tabela com borda */
+table.dataTable.row-border > tbody > tr > *,
+table.dataTable.display > tbody > tr > * {
+  border-top: 2px solid #fff;
+}
+ 
+table.dataTable.row-border > tbody > tr:first-child > *,
+table.dataTable.display > tbody > tr:first-child > * {
+  border-top: none;
+}
+ 
+ 
+/* Layout de linha e célula */
+div.dt-container div.dt-layout-row {
+  display: table;
+  clear: both;
+  width: 100%;
+  color: #fff;
+}
+ 
+div.dt-container div.dt-layout-cell {
+  display: table-cell;
+  padding: 5px 0;
+}
+ 
+div.dt-container div.dt-layout-cell.dt-end {
+  text-align: right;
+}
+ 
+div.dt-container div.dt-layout-cell:empty {
+  display: none;
+}
+ 
+/* Estilo de pesquisa */
+.dt-search {
+  margin-top: .3em;
+  padding-right: 2em;
+}
+
+ 
+div.dt-container select.dt-input {
+  padding: 4px;
+}
+ 
+/* Estilo da paginação */
+div.dt-container .dt-paging .dt-paging-button {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #000000 !important;
+}
+ 
+.dt-paging.paging_full_numbers {
+  margin-right: 2em;
+}
+ 
+div.dt-container .dt-paging .dt-paging-button.current,
+div.dt-container .dt-paging .dt-paging-button.current:hover {
+  color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #C87A7B;
+}
+ 
+div.dt-container .dt-paging .dt-paging-button.disabled,
+div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+div.dt-container .dt-paging .dt-paging-button.disabled:active {
+  cursor: default;
+  color: #fff !important;
+  border: 1px solid transparent;
+  background: transparent;
+  box-shadow: none;
+}
+ 
+div.dt-container .dt-paging .dt-paging-button:hover {
+  color: #fff !important;
+  background-color: rgb(200,122,123, 0.4);
+}
+ 
+div.dt-container .dt-paging .dt-paging-button:active {
+  border: 1px solid #fff;
+  background-color:rgb(200,122,123, 0.6);
+  box-shadow: inset 0 0 2px #ff7b7b;
+}
+
+.dt-paging-button disabled first, .dt-paging-button disabled previous{
+  color: aqua !important;
+}
+ 
+div.dt-container .dataTables_scroll {
+  clear: both;
+}
+ 
+div.dt-container .dataTables_scroll div.dt-scroll-body {
+  -webkit-overflow-scrolling: touch;
+}
+ 
+/* botão expandir */
+.botao_expandir {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+ 
+/* Responsividade */
+@media screen and (max-width: 767px) {
+  div.dt-container div.dt-layout-row {
+    display: block;
+  }
+ 
+  div.dt-container div.dt-layout-cell {
+    display: block;
+  }
+ 
+  div.dt-container div.dt-layout-cell.dt-full,
+  div.dt-container div.dt-layout-cell.dt-start,
+  div.dt-container div.dt-layout-cell.dt-end {
+    text-align: center;
+  }
+}
+ 
+@media screen and (max-width: 640px) {
+  .dt-container .dt-length,
+  .dt-container .dt-search {
+    float: none;
+    text-align: center;
+  }
+ 
+  .dt-container .dt-search {
+    margin-top: 0.5em;
+  }
+}
+ 
+.col-id {
+    width: 10%;
+}
+ 
+.col-nome {
+    width: 60%;
+}
+ 
+.col-quantidade {
+    width: 30%;
+}
+ 
+/* Estilo de pesquisa */
+.dt-search {
+    margin-top: .3em;
+    padding-right: 2em;
+  }
+ 
+  /* Estilo da palavra "Filtrar:" */
+  .dt-search label {
+    margin-right: 10px; /* Adicionando margem à direita */
+  }
+ 
+  div.dt-container .dt-paging .dt-paging-button.disabled,
+  div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+  div.dt-container .dt-paging .dt-paging-button.disabled:active {
+  cursor: default;
+  color: #919191 !important;
+  border: 1px solid transparent;
+  background: transparent;
+  box-shadow: none;
+}

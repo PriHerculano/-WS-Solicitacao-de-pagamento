@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="/css/parceiros/1.0cadastroParceiros.css">
     <link rel="stylesheet" href="/css/soldepgmto/3.1cadastroSoldePgto.css">
+    <link rel="stylesheet" href="/test/datableSDP.css">
+    <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
+    <script src="//cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
     <title>WebSupply</title>
 </head>
 
@@ -138,72 +143,83 @@
         </div>
     </div>
     <section>
-        
+
         <div class="container login-container">
             <form action="processar_login.php" method="post">
-            <h3 class="mb-2" style="font-family: Montserrat" ;>SOLICITAÇÃO DE PAGAMENTO</h3>
-            <h5 class="mb-5">Confira seus dados para a sua solicitação de pagamento, não se esqueça de especificar o
-                produto, preço e quantidade. Lembre-se que todos os campos são obrigatórios.</h5>
+                <h3 class="mb-2" style="font-family: Montserrat" ;>SOLICITAÇÃO DE PAGAMENTO</h3>
+                <h5 class="mb-5">Confira seus dados para a sua solicitação de pagamento, não se esqueça de especificar o
+                    produto, preço e quantidade. Lembre-se que todos os campos são obrigatórios.</h5>
 
-            <label class="w-100" for="usuario">Tipo de pessoa:<span style="color: rgb(202, 0, 0);">*</span></label>
-
-            <div class="dadosSolicitante">
-                <form action="processar_login.php" method="post">
-                    <div class="row">
-                        <div class="col-6">
-                            <div>
-                                <label class="w-100" for="usuario">Dados do solicitante:</label>
-                                <p><strong>Nome:</strong> Priscila Herculano</p>
+                <div class="dadosSolicitante">
+                    <form action="processar_login.php" method="post">
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <label class="w-100" for="usuario"><br>Dados do solicitante:</label>
+                                    <p><strong>Nome:</strong> Priscila Herculano</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="parceiro-select">
+                                    <label class="w-100" for="usuario">Parceiro:</label>
+                                    <select class="form-select form-select-lg mb-3"
+                                        style="border-radius: 30px; color: #3b3b3bc2;"
+                                        aria-label="Large select example">
+                                        <option selected>Selecione</option>
+                                        <option value="1">parceiro cadastrado</option>
+                                        <option value="2">parceiro cadastrado</option>
+                                        <option value="3">parceiro cadastrado</option>
+                                        <option value="4">parceiro cadastrado</option>
+                                        <option value="5">parceiro cadastrado</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div>
-                                <label class="w-100" for="usuario">Parceiro:</label>
-                                <select class="form-select form-select-lg mb-3"
-                                    style="border-radius: 30px; color: #3b3b3bc2;" aria-label="Large select example">
-                                    <option selected>Selecione</option>
-                                    <option value="1">parceiro cadastrado</option>
-                                    <option value="2">parceiro cadastrado</option>
-                                    <option value="3">parceiro cadastrado</option>
-                                    <option value="4">parceiro cadastrado</option>
-                                    <option value="5">parceiro cadastrado</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-            <div class="datadepgto">
-                <form>
-                    <div>
-                        <label for="dia">Data de pagamento:</label><br>
-                        <input class="data" type="date" name="dia" />
-                    </div>
-                </form>
-            </div>
-
-            <div class="anexnotafiscal">
-                <div class="arquivos">
-                    <p>Anexe o arquivo desejado no campo abaixo (PDF, XML, JPEG, DOC):</p>
-                    <form action="/upload" method="post" enctype="multipart/form-data">
-                        <input type="file" name="files[]" multiple>
                     </form>
                 </div>
-            </div>
 
-            <div class="addsolicitacao">
-                <p>Item</p>
-                <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-primary" type="button">Material</button>
-                    <button class="btn btn-primary" type="button">Serviço</button>
+                <div class="datadepgto">
+                    <form>
+                        <div>
+                            <label for="dia">Data de pagamento:</label><br>
+                            <input class="data" type="date" name="dia" />
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-6">
-                            <div>
-                                <label class="w-100" for="usuario">Parceiro:</label>
-                                <select class="form-select form-select-lg mb-3" style="border-radius: 30px; color: #3b3b3bc2; display: flex;"
+
+                <div class="pai-anexos">
+
+                    <div class="anexnotafiscal">
+                        <div class="arquivos">
+                            <p>Anexe o arquivo desejado no campo abaixo (PDF, XML, JPEG, DOC):</p>
+                            <form action="/upload" method="post" enctype="multipart/form-data">
+                                <input type="file" name="files[]" multiple>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="anexados">
+                        <p>notas fiscais anexadas:</p>
+                        <p>exemplo1.arq<br>
+                            exemplo2.arq<br>
+                            exemplo3.arq</p>
+                        </div>
+                    </div>
+                        
+                <div class="pai-item">
+                    <div class="addsolicitacao">
+                        <p>Item</p>
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn-item" type="button">Material</button>
+                            <button class="btn-item" type="button">Serviço</button>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <label class="w-100" for="usuario">Parceiro:</label>
+                                    <select class="form-select form-select-lg mb-3"
+                                    style="border-radius: 30px; color: #3b3b3bc2; display: flex;"
                                     aria-label="Large select example">
                                     <option selected>Selecione</option>
                                     <option value="1">item cadastrado</option>
@@ -217,41 +233,136 @@
                         <div class="col-6">
                             <label for="quantia">Quantidade:</label>
                             <input type="number" id="quantia" name="quantia" min="1" step="any" class="mb-3"
-                                style="border-radius: 30px; border: 2px solid #ccc; height: 40px; display: flex;" required> <br>
+                            style="border-radius: 30px; border: 2px solid #ccc; height: 40px; display: flex;"
+                            required> <br>
                         </div>
                         <p>COLOCAR BOTAO DE + AQUI</p>
                     </div>
                 </div>
             </div>
-
+            
             <div class="dadospgto">
                 <div>
                     <label class="w-100" for="usuario">Tipo de pagamento:</label>
-                    <select class="form-select form-select-lg mb-3" style="border-radius: 30px; color: #3b3b3bc2; display: flex;"
-                        aria-label="Large select example">
-                        <option selected>Selecione</option>
-                        <option value="1">Solicitação de pagamento</option>
-                        <option value="2">/Reembolso</option>
-                    </select>
-                </div>
+                    <select class="form-select form-select-lg mb-3"
+                    style="border-radius: 30px; color: #3b3b3bc2; display: flex;"
+                    aria-label="Large select example">
+                    <option selected>Selecione</option>
+                    <option value="1">Solicitação de pagamento</option>
+                    <option value="2">Reembolso</option>
+                </select>
             </div>
+        </div>
+    </div>
+        
+        <div class="dadosolicitacao">
+                    <p>Dados da solicitação</p>
+                    <div class="col-10" id="content">
+                        <section class="py-4">
+               
+                                <div class="row"> 
+                                            <div class="p-3">
+                                            <div class="box p-3 rounded-3">
+                                                <div class="dark-box p-3">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <table id="listSoldepgto" class="display"
+                                                                style="width: 100%">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>QNTD.</th>
+                                                                        <th>ITENS</th>
+                                                                        <th>VALOR</th>
+                                                                        <th>TOTAL-item</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>123.456.789-00</td>
+                                                                        <td>Fornecedor XYZ Ltda</td>
+                                                                        <td>Empresa Alfa</td>
+                                                                        <td> <a
+                                                                                href="/html/parceiros/1.3consultaParceiros.html">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="16" height="16"
+                                                                                    fill="currentColor"
+                                                                                    class="bi bi-pencil-square"
+                                                                                    viewBox="0 0 16 16"
+                                                                                    style="color: #5b6677;">
+                                                                                    <path
+                                                                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                                                    <path fill-rule="evenodd"
+                                                                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                                                                                </svg>
+                                                                            </a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>987.654.321-00</td>
+                                                                        <td>Distribuidora ABC S/A</td>
+                                                                        <td>Companhia Beta Ltda</td>
+                                                                        <td> <a
+                                                                                href="/html/parceiros/1.3consultaParceiros.html">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="16" height="16"
+                                                                                    fill="currentColor"
+                                                                                    class="bi bi-pencil-square"
+                                                                                    viewBox="0 0 16 16"
+                                                                                    style="color: #5b6677;">
+                                                                                    <path
+                                                                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                                                    <path fill-rule="evenodd"
+                                                                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                                                                                </svg>
+                                                                            </a></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <input type="submit" value="Confirmar">
+                    <script src="/js/home.js"></script>
+                <!--Efeito MENU-->
+                <script>
+                    var table = new DataTable('#listSoldepgto', {
+                        language: { url: "https://cdn.datatables.net/plug-ins/1.11.5/i18n/Portuguese-Brasil.json" },
+                        lengthMenu: [5], // Define o valor padrão de 6 sem a opção de seleção
+                        paging: false,
+                        searching: false,
+                        ordering: false,
+                        language: {
+                            lengthMenu: 'Apresentar _MENU_ linhas por página',
+                            zeroRecords: 'Não há Registros',
+                            info: 'Página _PAGE_ de _PAGES_',
+                            infoEmpty: false,
+                            infoFiltered: '',
+                            searchPlaceholder: "Buscar parceiro",
+                            search: '',
+                            paginate: {
+                                next: '<i class="fas fa-angle-right"></i>',
+                                previous: '<i class="fas fa-angle-left"></i>',
+                            },
+                        },
+                    });
+                </script>
 
-            <div class="dadosolicitacao">
-                <p>Dados da solicitação</p>
-                
-                
-            </div>
+        </div>
 
 
 
 
-                <input type="submit" value="Confirmar">
-            </form>
+        </form>
 
         </div>
     </section>
 
-    
+
 
     <!-- <div class="section"> <p>aaaa</p></div> -->
 
