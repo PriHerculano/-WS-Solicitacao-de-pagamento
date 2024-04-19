@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="/css/sidebar.css">
-    <link rel="stylesheet" href="/css/1.0cadastroParceiros.css">
+    <link rel="stylesheet" href="/css/itens/2.0cadastroItens.css">
     <title>WebSupply</title>
 </head>
 
@@ -31,10 +31,10 @@
             </div>
             <div class="nav">
                 <div class="menu">
-                    <!-- <p class="title">Main</p> -->
+                    <!-- <p class="title">Main</p>  -->
                     <ul>
                         <li class="active">
-                            <a href="/html/home.html">
+                            <a href="/0.0telainicio.html">
                                 <i class="icon ph-bold ph-house-simple"></i>
                                 <span class="text">Início</span>
                             </a>
@@ -47,12 +47,12 @@
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="#">
+                                    <a href="/html/parceiros/1.0cadastroParceiros.html">
                                         <span class="text">Cadastro</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/html/parceiros/1.2visualizarParceiros.html">
                                         <span class="text">Visualizar</span>
                                     </a>
                                 </li>
@@ -61,18 +61,18 @@
                         <li>
                             <a href="#">
                                 <i class="icon ph-bold ph-chart-bar"></i>
-                                <span class="text">Produto</span>
+                                <span class="text">Item</span>
                                 <i class="arrow ph-bold ph-caret-down"></i>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="#">
+                                    <a href="/html/itens/2.0cadastroItens.html">
                                         <span class="text">Cadastro</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <span class="text">Catálogo</span>
+                                    <a href="/html/itens/2.1visualizarItens.html">
+                                        <span class="text">Visualizar</span>
                                     </a>
                                 </li>
                             </ul>
@@ -91,11 +91,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span class="text">Consultar</span>
-                                    </a>
-                                </li><li>
-                                    <a href="#">
-                                        <span class="text">Aprovar</span>
+                                        <span class="text">Visualizar</span>
                                     </a>
                                 </li>
                             </ul>
@@ -118,7 +114,7 @@
                 <p class="title">Conta</p>
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="/0.0telainicio.html">
                             <i class="icon ph-bold ph-sign-out"></i>
                             <span class="text">Sair</span>
                         </a>
@@ -136,7 +132,7 @@
             <div>
                 <label class="w-100" for="senha">Nome:<span style="color: rgb(202, 0, 0);">*</span></label>
                 <div class="input-group">
-                    <input class="form-control" type="password" id="senha" name="senha" required>
+                    <input class="form-control" type="text" id="nomeItem" name="item" required>
                 </div>
             </div>
 
@@ -151,7 +147,7 @@
 
 
     
-                <input type="submit" value="Cadastrar">
+                <input type="submit" class="btn-cadastro" value="Cadastrar">
             </form>
 
         </div>

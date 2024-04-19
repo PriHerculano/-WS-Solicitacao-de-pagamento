@@ -1,0 +1,38 @@
+body {
+    background-image: url('../img/fundoCadastro.png');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+h3{
+    color: #000000;
+    font-weight: bold;
+    font-family:Montserrat;
+}
+
+.login-container {
+    justify-content: center;
+    background: #EFEFEF;
+    border-radius: 10px;
+    padding: 100px;
+    box-shadow: 0 0 10px  #7B7066;
+    color:  #353535;
+}
+
+.btn-cadastro{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #EF8E7D;
+    color:  #F1F1F1;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#nomeItem{
+    border-radius: 20px;
+    height: 45px;
+}
