@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.dadosParceiro{
+    margin-bottom: 20px; /* ou outro valor de margem que desejar */
+}
+
+.status-parceiro{
+    /* width: 65px; */
+    height: 150px;
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.status-parceiro p{
+    font-size: 20px;
+    background-color: #fff;
+    color: rgb(44, 179, 44);
+    width: 140px;
+    padding: 7px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.dadosParceiro{
+    padding: 20px;
+    background-color:rgb(217,217,217, 78%);
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.parceiro-select{
+    width: 390px;
+}
+
+.btn-item{
+    background-color: rgb(1,73,124, 78%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    height: 38px;
+    width: 75px;
+}
