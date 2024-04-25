@@ -13,7 +13,7 @@
     <!-- <link rel="stylesheet" href="//cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css"> -->
     <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="/test/datatable.css">
-    <link rel="stylesheet" href="/css/parceiros/1.2visualizarParceiros.css">
+    <link rel="stylesheet" href="/css/soldepgmto/3.3visualizarProcessoSoldePgto.css">
     <!-- <link rel="stylesheet" href="/css/homepage.css"> -->
     <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -136,11 +136,8 @@
           <div class="container">
               <div class="row">
                   <div class="box-maior">
-                      <h3 style="font-weight: bold; margin-top: 5px;">APROVAÇÃO DE SOLICITAÇÃO DE PAGAMENTO</h3>
-                      <h5>Revise e aprove as solicitações de pagamento pendentes. Cada solicitação representa uma transação específica.
-                        Avalie cuidadosamente as informações para garantir a precisão e a conformidade com as políticas financeiras da empresa.
-                        
-                        Para selecionar, aperte em cima do item desejado, caso queira ter mais detalhes, aperte em cima do N° de processo</h5>
+                      <h3 style="font-weight: bold; margin-top: 5px;">PROCESSOS DE SOLICITAÇÃO DE PAGAMENTO</h3>
+                      <h5>Clique no processo desejado e visualize individualmente para ter mais detalhes</h5>
                       <div class="p-3">
  
                   <div class="box p-3 rounded-3">
@@ -161,81 +158,91 @@
                                 <th>Data venc.</th>
                                 <th>solicitante</th>
                                 <th>Total</th>
+                                <th>Status</th>
                             </tr>
-                            <tbody>
-                                <tr>
-                                    <td>123.456.789-00</td>
-                                    <td>Empresa Alfa</td>
-                                    <td>Sol. de pagamento</td>
-                                    <td>10/01/2024</td>
-                                    <td>11/02/2024</td>
-                                    <td>Priscila Herculano</td>
-                                    <td>R$800.00</td>
-                                </tr>
-                                <tr>
-                                    <td>987.654.321-00</td>
-                                    <td>Companhia Beta Ltda</td>
-                                    <td>Reembolso</td>
-                                    <td>10/01/2024</td>
-                                    <td>15/02/2024</td>
-                                    <td>Priscila Herculano</td>
-                                    <td>R$1200.00</td>
-                                </tr>
-                                <tr>
-                                    <td>111.222.333-44</td>
-                                    <td>Indústria Gama S/A</td>
-                                    <td>Sol. de pagamento</td>
-                                    <td>11/01/2024</td>
-                                    <td>25/02/2024</td>
-                                    <td>Priscila Herculano</td>
-                                    <td>R$975.00</td>
-                                </tr>
-                                <tr>
-                                    <td>555.666.777-88</td>
-                                    <td>Serviços Delta</td>
-                                    <td>Sol. de pagamento</td>
-                                    <td>12/01/2024</td>
-                                    <td>30/02/2024</td>
-                                    <td>Priscila Herculano</td>
-                                    <td>R$1850.00</td>
-                                </tr>
-                                <tr>
-                                    <td>999.888.777-66</td>
-                                    <td>Corporação Ômega Ltda</td>
-                                    <td>Reembolso</td>
-                                    <td>13/01/2024</td>
-                                    <td>02/03/2024</td>
-                                    <td>Priscila Herculano</td>
-                                    <td>R$640.00</td>
-                                </tr>
-                                <tr>
-                                    <td>111.222.333-55</td>
-                                    <td>Empresa Ômega</td>
-                                    <td>Sol. de pagamento</td>
-                                    <td>14/01/2024</td>
-                                    <td>05/03/2024</td>
-                                    <td>Priscila Herculano</td>
-                                    <td>R$2400.00</td>
-                                </tr>
-                                <tr>
-                                    <td>444.555.666-77</td>
-                                    <td>Companhia Delta</td>
-                                    <td>Sol. de pagamento</td>
-                                    <td>15/01/2024</td>
-                                    <td>27/03/2024</td>
-                                    <td>Priscila Herculano</td>
-                                    <td>R$1640.00</td>
-                                </tr>
-                                <tr>
-                                    <td>777.888.999-11</td>
-                                    <td>Corporação Beta</td>
-                                    <td>Sol. de pagamento</td>
-                                    <td>15/01/2024</td>
-                                    <td>15/04/2024</td>
-                                    <td>Priscila Herculano</td>
-                                    <td>R$985.00</td>
-                                </tr>
-                            </tbody>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>123.456.789-00</td>
+                                <td>Empresa Alfa</td>
+                                <td>Sol. de pagamento</td>
+                                <td>10/01/2024</td>
+                                <td>11/02/2024</td>
+                                <td>Priscila Herculano</td>
+                                <td>R$800.00</td>
+                                <td>Aprovado</td>
+                            </tr>
+                            <tr>
+                                <td>987.654.321-00</td>
+                                <td>Companhia Beta Ltda</td>
+                                <td>Reembolso</td>
+                                <td>10/01/2024</td>
+                                <td>15/02/2024</td>
+                                <td>Priscila Herculano</td>
+                                <td>R$1200.00</td>
+                                <td>Aguardando</td>
+                            </tr>
+                            <tr>
+                                <td>111.222.333-44</td>
+                                <td>Indústria Gama S/A</td>
+                                <td>Sol. de pagamento</td>
+                                <td>11/01/2024</td>
+                                <td>25/02/2024</td>
+                                <td>Priscila Herculano</td>
+                                <td>R$975.00</td>
+                                <td>Aprovado</td>
+                            </tr>
+                            <tr>
+                                <td>555.666.777-88</td>
+                                <td>Serviços Delta</td>
+                                <td>Sol. de pagamento</td>
+                                <td>12/01/2024</td>
+                                <td>30/02/2024</td>
+                                <td>Priscila Herculano</td>
+                                <td>R$1850.00</td>
+                                <td>Aprovado</td>
+                            </tr>
+                            <tr>
+                                <td>999.888.777-66</td>
+                                <td>Corporação Ômega Ltda</td>
+                                <td>Reembolso</td>
+                                <td>13/01/2024</td>
+                                <td>02/03/2024</td>
+                                <td>Priscila Herculano</td>
+                                <td>R$640.00</td>
+                                <td>Aguardando</td>
+                            </tr>
+                            <tr>
+                                <td>111.222.333-55</td>
+                                <td>Empresa Ômega</td>
+                                <td>Sol. de pagamento</td>
+                                <td>14/01/2024</td>
+                                <td>05/03/2024</td>
+                                <td>Priscila Herculano</td>
+                                <td>R$2400.00</td>
+                                <td>Aguardando</td>
+                            </tr>
+                            <tr>
+                                <td>444.555.666-77</td>
+                                <td>Companhia Delta</td>
+                                <td>Sol. de pagamento</td>
+                                <td>15/01/2024</td>
+                                <td>27/03/2024</td>
+                                <td>Priscila Herculano</td>
+                                <td>R$1640.00</td>
+                                <td>Aguardando</td>
+                            </tr>
+                            <tr>
+                                <td>777.888.999-11</td>
+                                <td>Corporação Beta</td>
+                                <td>Sol. de pagamento</td>
+                                <td>15/01/2024</td>
+                                <td>15/04/2024</td>
+                                <td>Priscila Herculano</td>
+                                <td>R$985.00</td>
+                                <td>Reprovado</td>
+                            </tr>
+                        </tbody>
                           </table>
                         </div>
                       </div>
