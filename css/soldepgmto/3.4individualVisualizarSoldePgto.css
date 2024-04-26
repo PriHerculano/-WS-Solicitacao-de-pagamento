@@ -91,12 +91,13 @@
 .dadosolicitacao{
     background-color:rgb(217,217,217, 78%);
     border-radius: 10px;
-    display: flex;
 }
+
 
 .totalvalue{
     display: flex;
     align-items: center;
+    margin-left: 50px;
 }
 
 .totalvalue p {
@@ -106,10 +107,11 @@
 
 .tabela-arquivos{
     margin-top: 30px;
+    margin-left: 50px;
 }
 
 .tabela-arquivos table{
     margin-right: 520px;
     margin-top: 20px;
-    
+
 }

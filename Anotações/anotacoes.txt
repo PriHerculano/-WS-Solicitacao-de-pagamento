@@ -4,3 +4,9 @@ Arrumar:
 -Criar um CSS diferente para que não dê interferência já que o datatable sai do espaço estipulado para ele;
 -Criação das de consulta de item e de solicitação de pagamento;
 -Linkar todas as páginas para que elas se conectem - não esquecer os botões de edição - inclusive o link por linha do datatable;
+-Ajustar botão da aprovação da solicitação de pagamento;
+
+Criação de telas:
+-Edição de parceiros;
+-Edição de itens;
+-Consulta individual a solicitação de pagamento;

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Priscila Herculano">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/img/logo-fundoescuro.png" type="image/x-icon">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/parceiros/1.0cadastroParceiros.css">
+    <link rel="stylesheet" href="/css/parceiros/1.3edicaoParceiro.css">
+    <link rel="stylesheet" href="/test/datableSDP.css">
+    <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
+    <script src="//cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <title>WebSupply</title>
+</head>
+
+<body>
+
+    <div class="container-side-bar">
+        <div class="sidebar">
+            <div class="head">
+                <div class="user-img">
+                    <img src="/img/logo-fundoescuro.png" alt="">
+                </div>
+                <div class="user-details">
+                    <p class="title">Estágiario(a)</p>
+                    <p class="name">Priscila Herculano</p>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="menu">
+                    <!-- <p class="title">Main</p>  -->
+                    <ul>
+                        <li class="active">
+                            <a href="/0.0telainicio.html">
+                                <i class="icon ph-bold ph-house-simple"></i>
+                                <span class="text">Início</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-thumbs-up"></i>
+                                <span class="text">Parceiros</span>
+                                <i class="arrow ph-bold ph-caret-down"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/html/parceiros/1.0cadastroParceiros.html">
+                                        <span class="text">Cadastro</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/html/parceiros/1.1visualizarParceiros.html">
+                                        <span class="text">Visualizar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-chart-bar"></i>
+                                <span class="text">Item</span>
+                                <i class="arrow ph-bold ph-caret-down"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/html/itens/2.0cadastroItens.html">
+                                        <span class="text">Cadastro</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/html/itens/2.1visualizarItens.html">
+                                        <span class="text">Visualizar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-file-text"></i>
+                                <span class="text">Solicitação de Pagamento</span>
+                                <i class="arrow ph-bold ph-caret-down"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/html/Solicitação de pagamento/3.1cadastroSoldePgto.html">
+                                        <span class="text">Solicitar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/html/Solicitação de pagamento/3.2listadeaprovacaoSoldePgto.html">
+                                        <span class="text">Aprovar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/html/Solicitação de pagamento/3.3visualizarProcessoSoldePgto.html">
+                                        <span class="text">Visualizar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <p class="title">Configurações</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-user"></i>
+                                <span class="text">Usuários</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu">
+                <p class="title">Conta</p>
+                <ul>
+                    <li>
+                        <a href="/0.0telainicio.html">
+                            <i class="icon ph-bold ph-sign-out"></i>
+                            <span class="text">Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section>
+
+        <div class="container login-container">
+            <form action="processar_login.php" method="post">
+                <h3 class="mb-2" style="font-family: Montserrat" ;>PARCEIRO</h3>
+                <h5 class="mb-5">Empresas que prestam serviços. Caso queira alterar a atividade do parceiro, basta
+                    clicar em cima do status dele.</h5>
+
+                <div class="status-parceiro">
+                    <p>ATIVO</p>
+                </div>
+
+                <div class="dadosParceiro">
+                    <form action="processar_login.php" method="post">
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <div>
+                                        <label class="w-100" for="usuario">Tipo de pessoa:</label>
+                                        <select class="form-select form-select-lg mb-3"
+                                            style="border-radius: 30px; color: #3b3b3bc2; display: flex;"
+                                            aria-label="Large select example">
+                                            <option selected>Selecione</option>
+                                            <option value="1">CPF</option>
+                                            <option value="2">CNPJ</option>
+
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="quantia">CNPJ/CPF:</label>
+                                        <input type="number" id="quantia" name="quantia" min="1" step="any" class="mb-3"
+                                            style="border-radius: 30px; border: 2px solid #ccc; height: 40px;" required>
+                                        <br>
+                                    </div>
+                                    <div>
+                                        <label for="quantia">Parceiro:</label>
+                                        <input type="number" id="quantia" name="quantia" min="1" step="any" class="mb-3"
+                                            style="border-radius: 30px; border: 2px solid #ccc; height: 40px;" required>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="parceiro-select">
+                                    <p>Código: 000000000000000005</p>
+                                </div>
+                                <div>
+                                    <label class="w-100" for="usuario">Status</label>
+                                    <select class="form-select form-select-lg mb-3"
+                                        style="border-radius: 30px; color: #3b3b3bc2; display: flex;"
+                                        aria-label="Large select example">
+                                        <option selected>Selecione</option>
+                                        <option value="1">Ativo</option>
+                                        <option value="2">Inativo</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="dadosParceiro">
+                    <form action="processar_login.php" method="post">
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <div>
+                                        <label for="quantia">CEP:</label>
+                                        <input type="number" id="quantia" name="quantia" min="1" step="any" class="mb-3"
+                                            style="border-radius: 30px; border: 2px solid #ccc; height: 40px;" required>
+                                        <br>
+                                    </div>
+                                    <div>
+                                        <label for="quantia">Endereço:</label>
+                                        <input type="number" id="quantia" name="quantia" min="1" step="any" class="mb-3"
+                                            style="border-radius: 30px; border: 2px solid #ccc; height: 40px;" required>
+                                        <br>
+                                    </div>
+                                    <div>
+                                        <label for="quantia">Bairro:</label>
+                                        <input type="number" id="quantia" name="quantia" min="1" step="any" class="mb-3"
+                                            style="border-radius: 30px; border: 2px solid #ccc; height: 40px;" required>
+                                        <br>
+                                    </div>
+                                    <div>
+                                        <label for="quantia">Cidade:</label>
+                                        <input type="number" id="quantia" name="quantia" min="1" step="any" class="mb-3"
+                                            style="border-radius: 30px; border: 2px solid #ccc; height: 40px;" required>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="parceiro-select">
+                                    <div>
+                                        <label for="quantia">Número:</label>
+                                        <input type="number" id="quantia" name="quantia" min="1" step="any" class="mb-3"
+                                            style="border-radius: 30px; border: 2px solid #ccc; height: 40px;" required>
+                                        <br>
+                                    </div>
+                                    <div>
+                                        <label for="quantia">Complemento:</label>
+                                        <input type="number" id="quantia" name="quantia" min="1" step="any" class="mb-3"
+                                            style="border-radius: 30px; border: 2px solid #ccc; height: 40px;" required>
+                                        <br>
+                                    </div>
+                                    <div>
+                                        <label class="w-100" for="usuario">UF:</label>
+                                        <select class="form-select form-select-lg mb-3"
+                                            style="border-radius: 30px; color: #3b3b3bc2; display: flex;"
+                                            aria-label="Large select example">
+                                            <option value="" selected>Selecione</option>
+                                            <option value="AC">AC</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AP">AP</option>
+                                            <option value="AM">AM</option>
+                                            <option value="BA">BA</option>
+                                            <option value="CE">CE</option>
+                                            <option value="DF">DF</option>
+                                            <option value="ES">ES</option>
+                                            <option value="GO">GO</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MT">MT</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
+                                            <option value="PA">PA</option>
+                                            <option value="PB">PB</option>
+                                            <option value="PR">PR</option>
+                                            <option value="PE">PE</option>
+                                            <option value="PI">PI</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="RN">RN</option>
+                                            <option value="RS">RS</option>
+                                            <option value="RO">RO</option>
+                                            <option value="RR">RR</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SE">SE</option>
+                                            <option value="TO">TO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn-item" type="button">Editar<svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16"
+                            style="color: #ffffff; margin-left: 5px;">
+                            <path
+                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                            <path fill-rule="evenodd"
+                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                        </svg></button>
+                </div>
+
+                <script src="/js/home.js"></script>
+
+        </div>
+
+
+
+
+        </form>
+
+        </div>
+    </section>
+
+
+
+    <!-- <div class="section"> <p>aaaa</p></div> -->
+
+    <script src="/js/3.1cadastroSoldePgto.js"></script>
+    <!-- link bootstrap: -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- link de icones/simbolos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+        integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+        crossorigin="anonymous"></script>
+    <script src="/js/homepage.js"></script>
+</body>
+
+</html>
